@@ -1,0 +1,277 @@
+/*18122022*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --text-colorp: #000000;
+  --icon-colorp: #515151;
+  --secondary-colorp: #e1e0e0;
+  --primary-colorp: #139174;
+  --secondary-colorp: #38f9d7;
+  --panel-colorp: #ffffff;
+  --error-colorp: #ff004c;
+  --acept-colorp: #00ff00;
+  --border-colorp: #dcdcdc;
+  --star-colorp: #fff200;
+}
+body {
+  background-color: transparent;
+}
+
+.box {
+  position: relative;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  min-height: 540px;
+  max-height: 540px;
+  border-radius: 10px;
+  margin-top: 75px;
+  background-color: white;
+  z-index: 2;
+}
+
+.container:before {
+  content: "";
+  position: absolute;
+  height: 650px;
+  width: 1200px;
+  top: -20%;
+  right: 10%;
+  transform: translateY(-50%);
+  background-image: linear-gradient(-50deg, rgb(240, 235, 235) 0%, #38f9d7 20%);
+  border-radius: 50%;
+}
+
+.form {
+  margin-top: 15px;
+  height: 100%;
+  position: relative;
+  padding: 30px;
+}
+
+.form h2 {
+  position: relative;
+  color: var(--text-colorp);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.form h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100px;
+  height: 4px;
+  background: var(--primary-colorp);
+}
+
+.form .inputBox {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form .inputBox label {
+  position: relative;
+  text-align: left;
+  color: var(--text-colorp);
+}
+
+.form .inputBox select,
+.form .inputBox input {
+  background-color: white;
+  border: none;
+  outline: none;
+  padding: 8px 5px;
+  border-radius: 7px;
+  font-size: 13px;
+  color: var(--text-colorp);
+  box-shadow: 0 5px 5px rgba(223, 223, 223, 0.9);
+  border: 1px solid var(--border-colorp);
+}
+.form .inputBox select {
+  width: 100% auto;
+}
+.btn_cancelar {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  padding: 14px;
+  line-height: 12px;
+  border-radius: 10px;
+  margin-top: -10px;
+  border: none;
+  font-weight: 600;
+  left: 88%;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.btn_cancelar .ex {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: var(--primary-colorp);
+  font-size: 28px;
+}
+
+.form .inputBox span {
+  position: absolute;
+  right: 0;
+  margin-right: 40px;
+  margin-bottom: -30px;
+  background-color: transparent;
+  color: var(--text-colorp);
+  background-color: white;
+}
+
+.gridPagina {
+  /* width: 100%; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form .btns {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form .inputBox button {
+  background-image: linear-gradient(
+    to right,
+    #34e89e 0%,
+    #0f3443 51%,
+    #34e89e 100%
+  );
+  width: 98%;
+  margin: 5px;
+  padding: 15px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 1px #eee;
+  border-radius: 10px;
+  display: block;
+  border: 0;
+  cursor: pointer;
+}
+
+.form .inputBox button:hover {
+  background-position: right center; /* change the direction of the change here */
+  text-decoration: none;
+}
+
+.hide {
+  display: none;
+}
+
+button:disabled,
+button[disabled] {
+  border: none !important;
+  background: #989898 !important;
+  color: var(--secondary-colorp) !important;
+}
+
+/* PARA LA IMAGEN FORMULARIO */
+.ImagenContainer {
+  width: 100%;
+  margin-bottom: 60px;
+}
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.ImgUserFrm {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: rgb(198, 196, 201);
+  border-radius: 50%;
+  overflow: hidden;
+  /* box-shadow: 0 32px 22px rgba(100, 100, 100, 0.3); */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.ImgUserFrm .imgA {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  object-fit: cover;
+}
+.contenedorUsuario{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+#modalUser {
+  padding: 0;
+  background-color: transparent;
+  width: 100%;
+  border: 0;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 15px;
+}
+
+@media (max-width: 410px) {
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .form .inputBox input {
+    font-size: 11px;
+  }
+  .form {
+    padding: 10px;
+  }
+
+  .form h2 {
+    font-size: 14px;
+  }
+  .form h2::before {
+    width: 60px;
+  }
+  .ImgUserFrm {
+
+    align-items: center;
+    width: 125px;
+    height: 125px;
+   
+  }
+  .form .inputBox button{
+    padding: 12px 5px;
+  }
+  .btn_cancelar {
+   left: 85%;
+  }
+}

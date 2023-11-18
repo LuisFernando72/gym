@@ -1,0 +1,338 @@
+/*18122022*/
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --margin: 0 20px 0 20px;
+  --paddingG: 0 25px 0 25px;
+  --text-color: rgb(9, 9, 9);
+  --primary-color: #093d52;
+  --secondary-color: #34e89e;
+  --var-lighColor: #9a9797;
+  --hover-color: #7ae2f4;
+}
+
+a {
+  color: #0087c3;
+  text-decoration: none;
+}
+
+body {
+  position: relative;
+  width: 21cm;
+  height: 29.7cm;
+  margin: 0 auto;
+  background: transparent;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-family: Arial;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #bcfedf;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #093d52;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.contenedorReporte {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: white;
+  flex-direction: column;
+  border-radius: 6px;
+  overflow: auto;
+}
+
+@media print {
+  .btnAc {
+    display: none !important;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+.contenedorReporte .logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+#logo img {
+  height: 90px;
+  margin-left: -20px;
+}
+
+.contenedorReporte .dtEmpresa {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  text-align: right;
+  width: 100%;
+}
+
+.nombreEmpresa {
+  text-align: left;
+  line-height: 5px;
+  margin-top: 6px;
+  margin-left: -12px;
+}
+
+.nombreEmpresa span {
+  font-size: 14px;
+  letter-spacing: 3.6px;
+}
+.nombreEmpresa p {
+  font-weight: bold;
+  font-size: 8px;
+}
+
+#details {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: var(--margin);
+  margin-top: 12px;
+}
+
+#client {
+  padding-left: 10px;
+  border: 1px solid var(--primary-color);
+  border-left: 6px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#client .to {
+  color: #777777;
+}
+
+h2.name {
+  font-size: 1.5em;
+  font-weight: normal;
+  margin: 0;
+}
+
+#invoice {
+  padding: 10px;
+  text-align: right;
+}
+
+#invoice h1 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  line-height: 1em;
+  font-weight: normal;
+  /* margin: 0 0 10px 0; */
+}
+
+#invoice .date {
+  font-size: 1.1em;
+  color: var(--var-lighColor);
+}
+
+.ContainerHistorialClinico {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.headingf {
+  position: relative;
+  margin: var(--margin);
+}
+
+.headingf h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 7px;
+  width: 30%;
+  height: 3px;
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+.HistorialClinico {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: var(--margin);
+}
+
+.cPregunta {
+  font-size: 13px;
+  border: 1px solid var(--var-lighColor);
+  margin: 6px;
+  border-radius: 6px;
+  color: var(--text-color);
+  padding: 5px;
+}
+.cPregunta span:last-child {
+  font-weight: bold;
+  padding-left: 5px;
+  font-size: 13px;
+  color: #0f3443;
+  font-style: italic;
+}
+
+.cObservaciones {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cObservaciones .cObs {
+  position: relative;
+  padding: 3px;
+  border: 1px dashed #555555;
+  border-radius: 6px;
+  font-size: 13px;
+  margin: var(--margin);
+}
+
+.condiciones-energia {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.condiciones-energia .containerCodiciones {
+  /* width: 100%; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: var(--margin);
+}
+
+.ContainerTablePeso {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: var(--margin);
+}
+
+.ContainerTablePeso .tablePeso {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ContainerTablePeso .tablePeso table {
+  width: 80%;
+  min-width: 900px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  /* margin: var(--margin); */
+}
+
+.ContainerTablePeso .tablePeso thead tr th {
+  background-color: var(--primary-color);
+  color: black;
+  position: sticky;
+  font-size: 10px;
+  text-align: center;
+  border: 1px solid var(--text-color);
+  cursor: pointer;
+  color: white;
+}
+
+.ContainerTablePeso .tablePeso tbody td {
+  border: 1px solid var(--text-color);
+  max-width: 100px;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ContainerTablePeso .tablePeso tbody tr:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+
+.ContainerTablePeso .tablePeso tbody tr:hover {
+  background-color: var(--hover-color);
+}
+
+.btnAc {
+  background-image: linear-gradient(
+    to right,
+    #34e89e 0%,
+    #0f3443 51%,
+    #34e89e 100%
+  );
+  width: 100%;
+  margin: 20px 0 6px 0;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 6px #eee;
+  border-radius: 10px;
+  display: block;
+  border: 0;
+  cursor: pointer;
+}
+
+.btnAc:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+.footer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer h5 {
+  font-style: italic;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  body {
+    width: 100%;
+    font-size: 11px;
+  }
+  .contenedorReporte {
+    width: 100%;
+  }
+
+  .contenedorReporte .dtEmpresa {
+    font-size: 10px;
+  }
+  span{
+    font-size: 11px;
+  }
+  .ContainerTablePeso .tablePeso td{
+    font-size: 10px;
+  }
+   #logo img {
+    height: 50px
+  }
+}
+
